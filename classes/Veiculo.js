@@ -1,6 +1,7 @@
-class Veiculo {
-    constructor(placa, tipoDeCombustivel, anoDeFabricacao, cor) {
-        this.placa = placa,
+export class Veiculo {
+    constructor(marca, placa, tipoDeCombustivel, anoDeFabricacao, cor) {
+        this.marca = marca,
+            this.placa = placa,
             this.tipoDeCombustivel = tipoDeCombustivel,
             this.anoDeFabricacao = anoDeFabricacao,
             this.cor = cor
