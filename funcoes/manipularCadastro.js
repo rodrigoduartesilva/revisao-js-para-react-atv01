@@ -1,8 +1,11 @@
 import PromptSync from "prompt-sync";
+//Importação via desestruturação das funcoes de cadastro de veiculos
 import { cadastrarCarro, cadastrarMoto } from "./cadastrarVeiculo.js";
 import { exibirMenu } from "./exibirMenu.js";
 
+//Funcao chamada pelo index.js, esta funcao manipula os dados dos veiculos cadastrados
 export function manipularCadastro() {
+    //Arrays vazios onde serão armazenados os veiculos cadastrados
     const listaCarros = [];
     const listaMotos = [];
 
@@ -20,6 +23,7 @@ export function manipularCadastro() {
                 console.log(selecaoCadastro);
                 console.log('\n');
                 let carro = cadastrarCarro();
+                //A cada cadastro efetuado, o metodo push é chamado para inserir os valores dentro do array
                 listaCarros.push(carro);
                 break;
 
@@ -28,12 +32,14 @@ export function manipularCadastro() {
                 console.log(selecaoCadastro);
                 console.log('\n');
                 let moto = cadastrarMoto();
+                //A cada cadastro efetuado, o metodo push é chamado para inserir os valores dentro do array
                 listaMotos.push(moto);
                 break;
 
             case 3:
                 console.log('\n');
                 console.log('*** Impressão da lista de Veículos cadastrados ***');
+                //Adicionado via spread operator os dados cadastrados nas duas listas de veiculos
                 const listaVeiculos = [...listaCarros, ...listaMotos];
                 console.log('\n');
                 console.log(listaVeiculos);

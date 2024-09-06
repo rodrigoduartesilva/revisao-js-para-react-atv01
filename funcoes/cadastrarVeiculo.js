@@ -1,9 +1,12 @@
 import PromptSync from "prompt-sync";
+//Importacao das classes carro e motocicleta via desestruturação
 import { Carro } from "../classes/Carro.js";
 import { Motocicleta } from "../classes/Motocicleta.js";
 
-let prompt = new PromptSync();
+//Instanciando o promptSync para que o usuario possa interagir com a aplicação via entrada no teclado
+var prompt = new PromptSync();
 
+//Função para cadastrar os dados do carro
 export function cadastrarCarro() {
     let marca = prompt('Informe a marca: ');
     let placa = prompt('Informe o número da placa: ');
@@ -17,6 +20,7 @@ export function cadastrarCarro() {
     return carro;
 }
 
+//Função para cadastrar os dados da moto
 export function cadastrarMoto() {
     let marca = prompt('Informe a marca: ');
     let placa = prompt('Informe o número da placa: ');

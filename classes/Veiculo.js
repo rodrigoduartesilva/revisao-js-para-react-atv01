@@ -1,3 +1,4 @@
+//Classe veiculo, esta classe servirá de base e será herdada pelas demais
 export class Veiculo {
     constructor(marca, placa, tipoDeCombustivel, anoDeFabricacao, cor) {
         this.marca = marca,

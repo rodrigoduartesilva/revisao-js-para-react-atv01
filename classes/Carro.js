@@ -1,6 +1,6 @@
 import { Veiculo } from "./Veiculo.js";
 
-
+//Classe carro,esta classe herda os atributos e metodos da classe veiculo
 export class Carro extends Veiculo {
     constructor(marca, placa, tipoDeCombustivel, anoDeFabricacao, cor, quantidadeDePortas, tipoDeCambio) {
         super(marca, placa, tipoDeCombustivel, anoDeFabricacao, cor);

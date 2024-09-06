@@ -1,3 +1,4 @@
+//Funcao chamada para a exibição do menu da aplicação
 export function exibirMenu() {
     console.log('\n********** Cadastro de Veículos **********\n');
     console.log('1 - Cadastrar Carro');
