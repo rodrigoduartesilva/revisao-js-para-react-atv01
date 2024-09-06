@@ -3,8 +3,6 @@ import { Carro } from "../classes/Carro.js";
 import { Motocicleta } from "../classes/Motocicleta.js";
 
 let prompt = new PromptSync();
-const listaCarros = [];
-const listaMotos = [];
 
 export function cadastrarCarro() {
     let marca = prompt('Informe a marca: ');
@@ -15,9 +13,8 @@ export function cadastrarCarro() {
     let portas = prompt('Informe a quantidade de portas: ');
     let cambio = prompt('Informe o tipo de cambio: ');
 
-    const car = new Carro(marca, placa, combustivel, ano, cor, portas, cambio);
-    listaCarros.push(car);
-    return listaCarros;
+    const carro = new Carro(marca, placa, combustivel, ano, cor, portas, cambio);
+    return carro;
 }
 
 export function cadastrarMoto() {
@@ -30,6 +27,5 @@ export function cadastrarMoto() {
     let tipo = prompt('Informe o tipo de motocicleta: ');
 
     const moto = new Motocicleta(marca, placa, combustivel, ano, cor, cilindradas, tipo);
-    listaMotos.push(moto);
-    return listaMotos;
+    return moto;
 }
